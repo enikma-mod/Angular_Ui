@@ -1,0 +1,18 @@
+img {
+    width: 40px;
+    height: 30px;
+}
+
+#btn-cart {
+    background-color: dark;
+}
+
+#logo-heading {
+    font-size: 40px;
+    font-weight: 300px;
+}
+
+#logo-heading-coloring {
+    color: rgba(25, 155, 34, 0.719);
+}
+
