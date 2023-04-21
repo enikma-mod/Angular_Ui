@@ -58,6 +58,14 @@ a{
     height: 2px;
     background-color: rgb(88, 137, 88); /* change to desired hover effect color */
   }
+
+#sign-in-icon {
+    cursor: pointer;
+}
+
+#cart-icon {
+    cursor: pointer;
+}
   
 
 
