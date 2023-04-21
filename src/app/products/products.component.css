@@ -7,3 +7,27 @@
 .prod-heading {
     text-align: center;
 }
+
+#btn-cart {
+    font-size: 15px;
+    background: rgb(88, 137, 88);
+    text-align: center;
+    border: none;
+}
+
+.button-class {
+    text-align: center;
+}
+
+.card {
+    margin: 10px;
+    margin-bottom: 18px;
+}
+
+#heading-coloring {
+    color: green;
+}
+
+.prod-heading h2 {
+    font-size: 40px;
+}

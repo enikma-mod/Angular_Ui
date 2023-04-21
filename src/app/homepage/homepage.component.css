@@ -1,3 +1,97 @@
-* {
-    background-image: url('https://img.freepik.com/free-photo/small-cacti-with-white-wall-background_53876-133169.jpg?w=740&t=st=1682011853~exp=1682012453~hmac=2d995752b76fea02edefa6c25c974970950dde0ce951311ae574d3cde8082efd');
+body {
+    background-image: url('https://img.freepik.com/free-photo/top-view-plants-frame_23-2148928488.jpg?w=2000&t=st=1682056740~exp=1682057340~hmac=ced8a04b564e06cae9c79a73601ed83e2a38d7b1fb24b2f43e766841c08a71c9');
+    background-size: cover;
+    height: 100vh;
+    width: 100%; 
+    background-position: center center;
 }
+
+/* .btn-shopping {
+    text-align: center;
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 15px;
+} */
+
+
+/* Welcome heading */
+/* .welcome-msg h2 {
+    padding-top: 250px;
+    text-align: center;
+    color: white;
+    font-size: 80px;
+} */
+
+#welcome-desc {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.btn-shopping {
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+.welcome-msg {
+    padding-top: 250px;
+    text-align: center;
+    color: white;
+    font-size: 250px;
+}
+
+.welcome-msg h2 {
+    font-size: 80px;
+}
+
+#welcome-img-coloring {
+    color: rgb(75, 135, 75);
+    font-weight: 200;
+}
+
+#second-line {
+    margin-top: 0em;
+}
+
+.btn-shopping button {
+    padding: 10px;
+    width: 230px;
+    border: 1px solid green;
+    border-radius: 30px;
+}
+
+.btn-shopping button:hover {
+    background-color: rgb(88, 137, 88);
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #img-welcome {
+    margin: 100px;
+    padding-left: 50px;
+    padding-bottom: 500px;
+} */

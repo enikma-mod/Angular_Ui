@@ -1,10 +1,14 @@
+/**************** NAV BAR ******************/
+#nav-bar {
+    text-decoration: none;
+}
+
+
+
+/*************** LOGO HEADING AND ICON *****************/
 img {
     width: 40px;
     height: 30px;
-}
-
-#btn-cart {
-    background-color: dark;
 }
 
 #logo-heading {
@@ -13,6 +17,48 @@ img {
 }
 
 #logo-heading-coloring {
-    color: rgba(25, 155, 34, 0.719);
+    color: green;
+    /* color: rgba(25, 155, 34, 0.719); */
 }
+
+
+/************** CART BUTTON *****************/
+#btn-cart {
+    border-color: green;
+    /* background-color: grey; */
+}
+
+#btn-cart:hover {
+    background-color: rgb(88, 137, 88);
+}
+
+a{
+    text-decoration: none;
+    font-size: 16.5px;
+}
+
+/* a:hover {
+    background: rgb(88, 137, 88);
+} */
+
+/* CSS code for navbar hover effect */
+#nav-bar a {
+    margin: 8px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: border-bottom 0.3s ease;
+  }
+  
+  #nav-bar a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(88, 137, 88); /* change to desired hover effect color */
+  }
+  
+
+
 
