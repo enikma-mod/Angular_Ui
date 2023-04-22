@@ -3,6 +3,15 @@
     text-decoration: none;
 }
 
+/* #icon-logo {
+    width: 100px;
+    height: 100px;
+} */
+
+.logo {
+    cursor: pointer;
+}
+
 
 
 /*************** LOGO HEADING AND ICON *****************/
@@ -12,6 +21,7 @@ img {
 }
 
 #logo-heading {
+    cursor: pointer;
     font-size: 40px;
     font-weight: 300px;
 }
