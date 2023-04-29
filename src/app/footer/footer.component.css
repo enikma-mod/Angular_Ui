@@ -18,6 +18,7 @@
 .footer-text {
     color: black;
     text-align: center;
+    font-size: 15px;
 }
 
 #footer-btn {
@@ -27,8 +28,10 @@
 
 #footer-txt {
     color: black;
+    font-size: 15px;
 }
 
 .break-line {
-    color:rgb(88, 137, 88)
+    color:rgb(88, 137, 88);
+    border: 1px solid;
 }
