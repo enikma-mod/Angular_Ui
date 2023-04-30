@@ -1,6 +1,11 @@
+#nav-bar + router-outlet {
+    margin-top: -100px; 
+}
+
 /**************** NAV BAR ******************/
 #nav-bar {
     text-decoration: none;
+    align-items: center;
 
 }
 
@@ -43,9 +48,13 @@ img {
     background-color: rgb(88, 137, 88);
 }
 
+#cart-text {
+    font-size: 13px;
+}
+
 a{
     text-decoration: none;
-    font-size: 16.5px;
+    font-size: 15px;
 }
 
 /* a:hover {

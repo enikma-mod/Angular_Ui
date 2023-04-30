@@ -1,0 +1,4 @@
+#nav-bar + router-outlet {
+    margin-top: -20px; /* adjust this value as needed */
+}
+  
