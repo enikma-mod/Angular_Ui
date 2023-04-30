@@ -8,15 +8,18 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [			
     AppComponent,
     NavbarComponent,
     HomepageComponent,
-      ProductsComponent,
-      FooterComponent,
-      CartComponent
+    ProductsComponent,
+    FooterComponent,
+    CartComponent,
+    LoginComponent
    ],
   imports: [
     BrowserModule,

@@ -5,6 +5,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CartComponent } from './cart/cart.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
+import { LoginComponent } from './login/login.component';
+
 
 const routes: Routes = [
   { path: 'nav', component: NavbarComponent },
@@ -12,6 +14,7 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'cart', component: CartComponent },
   { path: 'footer', component: FooterComponent },
+  { path: 'login', component: LoginComponent }
 
 ];
 

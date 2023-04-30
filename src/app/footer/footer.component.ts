@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  isLoginPage: boolean = false;
 
-  ngOnInit() {
+  constructor(private sharedService: SharedService) { }
+
+  ngOnInit(): void {
+    this.isLoginPage = this.sharedService.isLoginPage;
   }
-
 }
