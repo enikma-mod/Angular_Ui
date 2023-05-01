@@ -30,6 +30,7 @@
     background: rgb(88, 137, 88);
     text-align: center;
     border: none;
+    text-transform: uppercase;
 }
 
 .button-class {

@@ -54,11 +54,18 @@
         <div class="card-img-top-wrapper">
           <img
             id="img-card"
-            src="../../assets/images/pepper-face-plant.jpg"
+            src="https://cdn.shopify.com/s/files/1/1595/2239/products/Plantify-808-Edit_360x.jpg?v=1620832113"
             alt="Pepper Face Plant"
             class="card-img-top"
-            (mouseenter)="changeImage('../../assets/images/monstera-deliciosa-plant-pot.jpg')"
-            (mouseleave)="changeImage('../../assets/images/fiddle-leaf-fig-plant-pot.jpg')"
+
+            (mouseenter)="changeImage([
+              'https://cdn.shopify.com/s/files/1/1595/2239/products/Plantify-808-Edit_1800x1800.jpg?v=1620832113',
+              'https://cdn.shopify.com/s/files/1/1595/2239/products/Plantify-722-Edit_1800x1800.jpg?v=1620832114',
+              'https://cdn.shopify.com/s/files/1/1595/2239/products/Plantify-1073-Edit_1800x1800.jpg?v=1620832115'
+            ])"
+            (mouseleave)="changeImage(['https://cdn.shopify.com/s/files/1/1595/2239/products/Plantify-818-Edit_1800x1800.jpg?v=1620832116'])"
+
+
           />
         </div>
         <div class="card-body">
