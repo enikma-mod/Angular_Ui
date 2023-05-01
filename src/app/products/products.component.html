@@ -7,18 +7,25 @@
     <div class="col-sm-12">
       <div class="text-center mx-auto">
         <p class="intro-descri">
-          Our primary collection of on-trend foliage and flowering houseplants to easily
-          brighten up your Space. Create the perfect Indoor Jungle with our selections
-          of <span class="p-coloring">Low Light</span>, <span class="p-coloring">Hanging</span>, <span class="p-coloring">Tabletop</span> and <span class="p-coloring">Easy Care</span> Plants, be it for your <span>Bathroom</span>,
-          <span class="p-coloring">General Living Space</span> or <span class="p-coloring">Office</span>. For something unique and eye-catching,
-          consider one of our traditional hand-tied <span class="p-coloring">Mossballs</span>. 
-          <br><br> Add something larger to
-          your plant collection with either our <span class="p-coloring">Floor Standing</span> and <span class="p-coloring">Extra Large</span> Plant
-          options. View our collection of <span class="p-coloring">Plant Pots</span> Pots to create the ultimate style combo.
-          For extra Plant Care Support checkout our <span class="p-coloring">Plant Care Tab</span>, for detailed Care
-          Instructions. 
-          <br><br>Enjoy quick, safe and affordable shipping anywhere in South
-          Africa!
+          Our primary collection of on-trend foliage and flowering houseplants
+          to easily brighten up your Space. Create the perfect Indoor Jungle
+          with our selections of <span class="p-coloring">Low Light</span>,
+          <span class="p-coloring">Hanging</span>,
+          <span class="p-coloring">Tabletop</span> and
+          <span class="p-coloring">Easy Care</span> Plants, be it for your
+          <span>Bathroom</span>,
+          <span class="p-coloring">General Living Space</span> or
+          <span class="p-coloring">Office</span>. For something unique and
+          eye-catching, consider one of our traditional hand-tied
+          <span class="p-coloring">Mossballs</span>. <br /><br />
+          Add something larger to your plant collection with either our
+          <span class="p-coloring">Floor Standing</span> and
+          <span class="p-coloring">Extra Large</span> Plant options. View our
+          collection of <span class="p-coloring">Plant Pots</span> Pots to
+          create the ultimate style combo. For extra Plant Care Support checkout
+          our <span class="p-coloring">Plant Care Tab</span>, for detailed Care
+          Instructions. <br /><br />Enjoy quick, safe and affordable shipping
+          anywhere in South Africa!
         </p>
       </div>
     </div>
@@ -26,7 +33,9 @@
 </div>
 
 <div class="filter-dropdown">
-  <button class="filter-btn">Filter Plants <i class="fas fa-caret-down"></i></button>
+  <button class="filter-btn">
+    Filter Plants <i class="fas fa-caret-down"></i>
+  </button>
   <div class="filter-content">
     <a href="#">Best Selling</a>
     <a href="#">On Sale</a>
@@ -34,26 +43,24 @@
     <a href="#">Price, low to high</a>
     <a href="#">Price, high to low</a>
     <a href="#">Date, old to low</a>
-
   </div>
 </div>
-
-
 
 <div class="container mt-5">
   <div class="row">
     <!-- Card 1 -->
     <div class="col-sm-3">
       <div class="card" style="width: 18rem">
-        <!-- <img id="img-card" src="https://img.freepik.com/free-photo/pepper-face-plant-small-pot_53876-94408.jpg?w=740&t=st=1682012489~exp=1682013089~hmac=8431ac3be51a448f754b828068b9e1ad1ba81cc493c928982e31acacd6b0263f" alt="Plant 1" class="card-img-top"> -->
-
-        <img
-          id="img-card"
-          src="../../assets/images/pepper-face-plant.jpg"
-          alt="Pepper Face Plant"
-          class="card-img-top"
-        />
-
+        <div class="card-img-top-wrapper">
+          <img
+            id="img-card"
+            src="../../assets/images/pepper-face-plant.jpg"
+            alt="Pepper Face Plant"
+            class="card-img-top"
+            (mouseenter)="changeImage('../../assets/images/monstera-deliciosa-plant-pot.jpg')"
+            (mouseleave)="changeImage('../../assets/images/fiddle-leaf-fig-plant-pot.jpg')"
+          />
+        </div>
         <div class="card-body">
           <div class="card-info">
             <p class="card-title">Pepper Face Plant</p>
@@ -67,6 +74,7 @@
         </div>
       </div>
     </div>
+    
 
     <!-- Card 3 -->
     <div class="col-sm-3">
@@ -82,7 +90,9 @@
         <div class="card-body">
           <div class="card-info">
             <p class="card-title">Peace lily</p>
-            <span class="card-text"><span class="price-text">from</span> R350</span>
+            <span class="card-text"
+              ><span class="price-text">from</span> R350</span
+            >
           </div>
           <div class="button-class">
             <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
@@ -108,7 +118,9 @@
         <div class="card-body">
           <div class="card-info">
             <p class="card-title">Monstera plant</p>
-            <span class="card-text"><span class="price-text">from</span> R249</span>
+            <span class="card-text"
+              ><span class="price-text">from</span> R249</span
+            >
           </div>
           <div class="button-class">
             <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
@@ -133,7 +145,9 @@
         <div class="card-body">
           <div class="card-info">
             <p class="card-title">Monstera deliciosa</p>
-            <span class="card-text"><span class="price-text">from</span> R199</span>
+            <span class="card-text"
+              ><span class="price-text">from</span> R199</span
+            >
           </div>
           <div class="button-class">
             <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
@@ -158,7 +172,9 @@
         <div class="card-body">
           <div class="card-info">
             <p class="card-title">Snake Plant</p>
-            <span class="card-text"><span class="price-text">from</span> R249</span>
+            <span class="card-text"
+              ><span class="price-text">from</span> R249</span
+            >
           </div>
           <div class="button-class">
             <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
@@ -183,7 +199,9 @@
         <div class="card-body">
           <div class="card-info">
             <p class="card-title">Fiddle leaf fig plant</p>
-            <span class="card-text"><span class="price-text">from</span> R329</span>
+            <span class="card-text"
+              ><span class="price-text">from</span> R329</span
+            >
           </div>
           <div class="button-class">
             <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
@@ -208,7 +226,9 @@
         <div class="card-body">
           <div class="card-info">
             <p class="card-title">Fiddle leaf fig plant</p>
-            <span class="card-text"> <span class="price-text">from</span> R329</span>
+            <span class="card-text">
+              <span class="price-text">from</span> R329</span
+            >
           </div>
           <div class="button-class">
             <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
@@ -233,7 +253,9 @@
         <div class="card-body">
           <div class="card-info">
             <p class="card-title">Fiddle leaf fig plant</p>
-            <span class="card-text"> <span class="price-text">from</span> R329</span>
+            <span class="card-text">
+              <span class="price-text">from</span> R329</span
+            >
           </div>
           <div class="button-class">
             <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
