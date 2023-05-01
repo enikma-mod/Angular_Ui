@@ -2,6 +2,7 @@
     width: 250px;
     height: 260px;
     padding-left: 50px;
+    cursor: pointer;
 }
 
 .intro-descri {
@@ -57,4 +58,71 @@
 .card-info p {
     text-transform: uppercase;
     color: black;
+    font-weight: 300;
+}
+
+.price-text {
+    font-size: 14px;
+    font-weight: 200;
+    color: black
+}
+
+.card-text {
+    font-size: 15px;
+    font-weight: 300;
+
+}
+
+/* FILTER BUTTON */
+.filter-dropdown {
+    position: absolute;
+    /* top: 10px; */
+    right: 5px;
+    margin-right: 85px;
+    /* margin-bottom: 100px; */
+}
+
+.filter-btn {
+    background-color: rgb(88, 137, 88);
+    color: white;
+    padding: 10px 20px 10px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-btn i {
+    margin-left: 100px;
+}
+
+.filter-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    right: 10;
+}
+
+.filter-content a {
+    color: black;
+    padding: 12px 50px;
+    text-decoration: none;
+    display: block;
+}
+
+.filter-content a:hover {
+    background-color: #ddd;
+}
+
+.filter-dropdown:hover .filter-content {
+    display: block;
+}
+
+.filter-dropdown:hover .filter-btn {
+    background-color: #3e8e41;
 }
