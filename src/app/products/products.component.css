@@ -9,7 +9,15 @@
     letter-spacing: .025em;
     line-height: 1.6;
     color: black;
-    font-size: 14px;
+    font-size: 14.5px;
+    margin-top: 10px;
+}
+
+/* Paragraph color styling*/
+.p-coloring {
+    text-decoration: underline;
+    color: green;
+    cursor: pointer;
 }
 
 .prod-heading {
@@ -40,4 +48,13 @@
 
 .prod-heading h2 {
     font-size: 40px;
+}
+
+.card-info {
+    text-align: center;
+}
+
+.card-info p {
+    text-transform: uppercase;
+    color: black;
 }
