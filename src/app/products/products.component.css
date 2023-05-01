@@ -4,6 +4,14 @@
     padding-left: 50px;
 }
 
+.intro-descri {
+    text-align: center;
+    letter-spacing: .025em;
+    line-height: 1.6;
+    color: black;
+    font-size: 14px;
+}
+
 .prod-heading {
     text-align: center;
 }
@@ -20,7 +28,9 @@
 }
 
 .card {
-    margin: 10px;
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
     margin-bottom: 18px;
 }
 
