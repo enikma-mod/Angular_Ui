@@ -1,4 +1,6 @@
-// require('dotenv').config();
+// Import the dotenv package at the top of your file
+require('dotenv').config();
 module.exports = {
-    url: `mongodb+srv://sirmodika:12345@cluster0.l89nv2u.mongodb.net/?retryWrites=true&w=majority`
+    url: process.env.DATABASE_URL,
+    Port: process.env.PORT
 };

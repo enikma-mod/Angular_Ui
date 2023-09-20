@@ -28,10 +28,15 @@ const Product = require("./app/models/product.model")(mongoose);
 
 
 // set port, listen for requests
-const PORT = 9000 || 8081;
+const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+  console.log(`Plant-Dads server is running on port ${PORT}.`);
 });
+
+// require('./app/routes/auth.routes')(app);
+// require('./app/routes/user.routes')(app);
+require("./app/routes/product.routes.js")(app);
+// require("./app/routes/wishlist.routes")(app);
 
 mongoose
   .connect(dbConfig.url, {
