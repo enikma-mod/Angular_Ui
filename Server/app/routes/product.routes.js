@@ -4,15 +4,15 @@ module.exports = app => {
     var router = require("express").Router();
   
     // Create a new Product
-    router.post("/", products.create);
+    router.post("/createProduct", products.create);
   
     // Retrieve all Products
-    router.get("/", products.findAll);
+    router.get("/getAllProducts", products.findAll);
 
-    // find by title
+    // find by product
     // router.get("/", products.findAll);
-    router.get("/", products.findByTitle);
-    router.get("/title", products.findByTitle);  
+    router.get("/productName", products.findByName);
+    router.get("/title", products.findByName);  
   
     // Retrieve all published productss
     router.get("/published", products.findAllPublished);

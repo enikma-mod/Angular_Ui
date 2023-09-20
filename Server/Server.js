@@ -5,8 +5,9 @@ require('dotenv').config();
 const dbConfig = require("./app/config/dbconfig.js")
 const app = express();
 
+
 var corsOptions = {
-  origin: "*"
+  origin: process.env.PORT
 };
 
 app.use(cors(corsOptions));
@@ -24,7 +25,7 @@ app.get("/", (req, res) => {
 
 // Import the mongoose object and the Product model
 const mongoose = require("mongoose");
-const Product = require("./app/models/product.model")(mongoose);
+// const Product = require("./app/models/product.model")(mongoose);
 
 
 // set port, listen for requests

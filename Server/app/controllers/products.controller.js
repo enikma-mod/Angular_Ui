@@ -1,27 +1,28 @@
-const db = require("../models");
-const Product = db.products;
+// const db = require("../models/product.model.js");
+const Product = require("../models/product.model.js");
 
-// Create and Save a new Movie
+// Create and Save a new Product
+// @POST
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.title) {
+  if (!req.body.plant_Name) {
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
 
 
   const product = new Product({
-    plantName: req.body.plantName,
-    plantDescription: req.body.plantDescription,
-    plantPrice: req.body.plantPrice,
-    image_url1: req.body.image_url1,
-    image_url2: req.body.image_url2,
-    image_url3: req.body.image_url3
+    plant_Name: req.body.plant_Name,
+    plant_Description: req.body.plant_Description,
+    plant_Price: req.body.plant_Price,
+    image_link1: req.body.image_link1,
+    image_link2: req.body.image_link2,
+    plant_care: req.body.plant_care
   });
 
   // Save Product in the database
   product
-    .save(product)
+    .save()
     .then(data => {
       res.send(data);
     })
@@ -33,10 +34,11 @@ exports.create = (req, res) => {
     });
 };
 
-// Retrieve all Movies from the database.
+// Retrieve all Products from the database.
+// @Get
 exports.findAll = (req, res) => {
-    const plantName = req.query.plantName;
-    var condition = plantName ? { tiplantNametle: { $regex: new RegExp(plantName), $options: "i" } } : {};
+    const plant_Name = req.query.plant_Name;
+    const condition = plant_Name ? { plant_Name: { $regex: new RegExp(plant_Name), $options: "i" } } : {};
   
     Product.find(condition)
       .then(data => {
@@ -51,6 +53,7 @@ exports.findAll = (req, res) => {
 };
 
 // Find a single Movie with an id
+// @GET by id
 exports.findOne = (req, res) => {
     const id = req.params.id;
 
@@ -68,24 +71,26 @@ exports.findOne = (req, res) => {
 };
 
 //find by Title
-exports.findByTitle = (req, res) => {
-  const plantName = req.query.plantName;
+//@GET by namr
+exports.findByName = (req, res) => {
+  const plant_Name = req.query.plant_Name;
 
-  Movie.findOne( title)
+  Product.findOne( plant_Name)
     .then(data => {
       if (!data)
-        res.status(404).send({ message: "Not found Product with title " + plantName });
+        res.status(404).send({ message: "Not found Product with name " + plant_Name });
       else res.send(data);
     })
     .catch(err => {
       res
         .status(500)
-        .send({ message: "Error retrieving Product with title=" + plantName });
+        .send({ message: "Error retrieving Product with title=" + plant_Name });
     });
 };
 
 
 // Update a Movie by the id in the request
+// @PUT
 exports.update = (req, res) => {
     if (!req.body) {
         return res.status(400).send({
@@ -111,6 +116,7 @@ exports.update = (req, res) => {
 };
 
 // Delete a Movie with the specified id in the request
+// @ DELETE
 exports.delete = (req, res) => {
     const id = req.params.id;
 

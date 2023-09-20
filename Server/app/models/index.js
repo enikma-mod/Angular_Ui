@@ -1,16 +1,16 @@
-// const mongoose = require('mongoose');
-// mongoose.Promise = global.Promise;
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 
-// const db = {};
+const db = {};
 
-// db.mongoose = mongoose;
+db.mongoose = mongoose;
 
-// // db.user = require("./user.model");
-// // db.role = require("./role.model");
+// db.user = require("./user.model");
+// db.role = require("./role.model");
 
 
-// //movies App
-// db.products = require("./product.model").default(mongoose);
-// // db.wishlist = require('./wishlist.model')(mongoose);
+//movies App
+db.products = require("../models/product.model.js")(mongoose);
+// db.wishlist = require('./wishlist.model')(mongoose);
 
-// module.exports = db;
+module.exports = db;
