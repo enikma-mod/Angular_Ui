@@ -5,11 +5,20 @@
     font-size: 35px;
 }
 
+.container {
+   
+    /* box-shadow: 0px 0px 10px rgb(205, 213, 205); */
+}
+
 /* .container form {
     margin-bottom: 100px;
-    box-shadow: 0px 0px 10px rgb(88, 137, 88);
-    padding: 40px 40px 40px 40px;
-  } */
+    border-radius: 10px; 
+
+    box-shadow: 0px 0px 10px rgb(205, 213, 205);
+    border: 10px solid green;
+    border: 2px solid #ccc; 
+    padding: 80px 100px;
+} */
 
 .form-group {
     font-size: 15px;
