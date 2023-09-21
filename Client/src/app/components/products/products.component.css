@@ -3,6 +3,8 @@
     height: 260px;
     padding-left: 50px;
     cursor: pointer;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 25%;
 }
 
 .intro-descri {

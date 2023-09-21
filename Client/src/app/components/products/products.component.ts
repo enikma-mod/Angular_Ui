@@ -14,6 +14,7 @@ export class ProductsComponent implements OnInit {
   // }
 
   //keep track of the current image being displayed.
+  //card image changes on hover.
   private currentImageIndex = 0;
 
   changeImage(imageUrls: string[]) {

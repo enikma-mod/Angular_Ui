@@ -29,11 +29,21 @@ img {
 #logo-heading {
     cursor: pointer;
     font-size: 40px;
-    font-weight: 300px;
+    font-weight: 600;
+    border: 2px solid green;
+    border-radius: 5px;
+    outline-offset: -4px;
+    background-clip: content-box;
 }
+
+
+
+
 
 #logo-heading-coloring {
     color: green;
+    padding: 3px;
+    border-radius: 2px;
     /* color: rgba(25, 155, 34, 0.719); */
 }
 
