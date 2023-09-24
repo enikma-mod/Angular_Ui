@@ -16,6 +16,19 @@
     margin-top: 10px;
 }
 
+.heading-img {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.heading-img img {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    width: 200px;
+}
+
 /* Paragraph color styling*/
 .p-coloring {
     text-decoration: underline;
