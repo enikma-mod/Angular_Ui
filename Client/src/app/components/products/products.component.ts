@@ -15,7 +15,7 @@ export class ProductsComponent implements OnInit {
   // img.src = imageUrl;
   // }
   products: Product[] = [];
-  loading = true;
+  isLoading: boolean = true;
   //keep track of the current image being displayed.
   //card image changes on hover.
   private currentImageIndex = 0;
@@ -26,14 +26,18 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit() {
     this.getProducts();
+
+    // Simulate data loading
+    setTimeout(() => {
+      this.isLoading = false; // Set isLoading to false once the data is loaded
+    }, 2000);
+     
   }
 
   getProducts(): void {
     this.productService.getAllProducts()
       .subscribe(products => {
         this.products = products;
-        this.loading = false;
-        console.log('hhhhhhh')
       });
   }
 
