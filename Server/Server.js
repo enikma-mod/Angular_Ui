@@ -7,7 +7,7 @@ const app = express();
 
 
 var corsOptions = {
-  origin: process.env.PORT
+  origin: "*"
 };
 
 app.use(cors(corsOptions));
@@ -45,8 +45,8 @@ mongoose
     useUnifiedTopology: true
   })
   .then(() => {
-    console.log(dbConfig.url)
-    console.log("Successfully connect to MongoDB.");
+    // console.log(dbConfig.url)
+    console.log("Successfully connected to PlantDads Server.");
     // You can perform any necessary initializations here.
   })
   .catch(err => {

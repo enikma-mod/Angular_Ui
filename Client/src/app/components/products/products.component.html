@@ -51,32 +51,26 @@
 <div class="container mt-5">
   <div class="row">
     <!-- Card 1 -->
-    <div class="col-sm-3">
+    <div class="col-sm-3" *ngFor="let product of products">
       <div class="card" style="width: 18rem">
         <div class="card-img-top-wrapper">
           <img
             id="img-card"
-            src="https://cdn.shopify.com/s/files/1/1595/2239/products/Plantify-808-Edit_360x.jpg?v=1620832113"
-            alt="Pepper Face Plant"
+            [src]="product.image_link1"
+            alt=""
             class="card-img-top"
 
-            (mouseenter)="changeImage([
-              'https://cdn.shopify.com/s/files/1/1595/2239/products/Plantify-808-Edit_1800x1800.jpg?v=1620832113',
-              'https://cdn.shopify.com/s/files/1/1595/2239/products/Plantify-722-Edit_1800x1800.jpg?v=1620832114',
-              'https://cdn.shopify.com/s/files/1/1595/2239/products/Plantify-1073-Edit_1800x1800.jpg?v=1620832115'
-            ])"
-            (mouseleave)="changeImage(['https://cdn.shopify.com/s/files/1/1595/2239/products/Plantify-818-Edit_1800x1800.jpg?v=1620832116'])"
-
-
+            
           />
+
         </div>
         <div class="card-body">
           <div class="card-info">
-            <p class="card-title">Pepper Face Plant</p>
-            <span class="card-text"><span class="price-text">from</span> R150</span>
+            <p class="card-title">{{product.plant_Name}}</p>
+            <span class="card-text"><span class="price-text">from</span> R{{product.plant_Price}}</span>
           </div>
           <div class="button-class">
-            <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
+            <button id="btn-cart" class="btn btn-primary btn-lg btn-block" style="margin-top: 10px;">
               Add to Cart
             </button>
           </div>
@@ -84,195 +78,4 @@
       </div>
     </div>
     
-
-    <!-- Card 3 -->
-    <div class="col-sm-3">
-      <div class="card" style="width: 18rem">
-        <!-- <img id="img-card" src="https://img.freepik.com/free-photo/peace-lily-plant-pot_53876-133141.jpg?w=360&t=st=1682013581~exp=1682014181~hmac=31266ad1bfc1c3a42c19b6190b4003afc3b404d6effb09fb2c6857e1e26fa37c" alt="Plant 3" class="card-img-top"> -->
-
-        <img
-          id="img-card"
-          src="../../assets/images/peace-lily-plant-pot.jpg"
-          alt="Peace lily Plant"
-          class="card-img-top"
-        />
-        <div class="card-body">
-          <div class="card-info">
-            <p class="card-title">Peace lily</p>
-            <span class="card-text"
-              ><span class="price-text">from</span> R350</span
-            >
-          </div>
-          <div class="button-class">
-            <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="col-sm-3">
-      <div class="card" style="width: 18rem">
-        <!-- <img id="img-card" src="https://img.freepik.com/free-photo/monstera-plant-white-pot_53876-142825.jpg?w=740&t=st=1682015695~exp=1682016295~hmac=abcde1b800dd1463089f5ac37ff9ccf57c14c115501cc866be0d5a2462e76d8c" alt="Plant 3" class="card-img-top"> -->
-
-        <img
-          id="img-card"
-          src="../../assets/images/monstera-plant-white-pot.jpg"
-          alt="Peace lily Plant"
-          class="card-img-top"
-        />
-
-        <div class="card-body">
-          <div class="card-info">
-            <p class="card-title">Monstera plant</p>
-            <span class="card-text"
-              ><span class="price-text">from</span> R249</span
-            >
-          </div>
-          <div class="button-class">
-            <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width: 18rem">
-        <!-- <img id="img-card" src="https://img.freepik.com/free-photo/monstera-deliciosa-plant-pot_53876-133119.jpg?t=st=1682015695~exp=1682016295~hmac=7dd12a6a501cf9012d1ba0ba0ad0220597c92c40362eb40a362e0be8abdaa3cb" alt="Plant 3" class="card-img-top"> -->
-
-        <img
-          id="img-card"
-          src="../../assets/images/monstera-plant-white-pot.jpg"
-          alt="Peace lily Plant"
-          class="card-img-top"
-        />
-
-        <div class="card-body">
-          <div class="card-info">
-            <p class="card-title">Monstera deliciosa</p>
-            <span class="card-text"
-              ><span class="price-text">from</span> R199</span
-            >
-          </div>
-          <div class="button-class">
-            <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width: 18rem">
-        <!-- <img id="img-card" src="https://img.freepik.com/premium-photo/snake-plant-white-pot_832479-368.jpg?size=626&ext=jpg&ga=GA1.3.1391638506.1675944335&semt=ais" alt="Plant 3" class="card-img-top"> -->
-
-        <img
-          id="img-card"
-          src="../../assets/images/snake-plant-white-pot_832479-368.jpg"
-          alt="Snake Plant"
-          class="card-img-top"
-        />
-
-        <div class="card-body">
-          <div class="card-info">
-            <p class="card-title">Snake Plant</p>
-            <span class="card-text"
-              ><span class="price-text">from</span> R249</span
-            >
-          </div>
-          <div class="button-class">
-            <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width: 18rem">
-        <!-- <img id="img-card" src="https://img.freepik.com/free-photo/fiddle-leaf-fig-plant-pot_53876-134273.jpg?w=360&t=st=1682016641~exp=1682017241~hmac=ec38933741df7f93808da046e008b08f4c4a94f8d4ec12634aa10aafb2a05536" alt="Plant 3" class="card-img-top"> -->
-
-        <img
-          id="img-card"
-          src="../../assets/images/fiddle-leaf-fig-plant-pot.jpg"
-          alt="Snake Plant"
-          class="card-img-top"
-        />
-
-        <div class="card-body">
-          <div class="card-info">
-            <p class="card-title">Fiddle leaf fig plant</p>
-            <span class="card-text"
-              ><span class="price-text">from</span> R329</span
-            >
-          </div>
-          <div class="button-class">
-            <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width: 18rem">
-        <!-- <img id="img-card" src="https://img.freepik.com/free-photo/fiddle-leaf-fig-plant-pot_53876-134273.jpg?w=360&t=st=1682016641~exp=1682017241~hmac=ec38933741df7f93808da046e008b08f4c4a94f8d4ec12634aa10aafb2a05536" alt="Plant 3" class="card-img-top"> -->
-
-        <img
-          id="img-card"
-          src="../../assets/images/fiddle-leaf-fig-plant-pot.jpg"
-          alt="Snake Plant"
-          class="card-img-top"
-        />
-
-        <div class="card-body">
-          <div class="card-info">
-            <p class="card-title">Fiddle leaf fig plant</p>
-            <span class="card-text">
-              <span class="price-text">from</span> R329</span
-            >
-          </div>
-          <div class="button-class">
-            <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width: 18rem">
-        <!-- <img id="img-card" src="https://img.freepik.com/free-photo/fiddle-leaf-fig-plant-pot_53876-134273.jpg?w=360&t=st=1682016641~exp=1682017241~hmac=ec38933741df7f93808da046e008b08f4c4a94f8d4ec12634aa10aafb2a05536" alt="Plant 3" class="card-img-top"> -->
-
-        <img
-          id="img-card"
-          src="../../assets/images/fiddle-leaf-fig-plant-pot.jpg"
-          alt="Snake Plant"
-          class="card-img-top"
-        />
-
-        <div class="card-body">
-          <div class="card-info">
-            <p class="card-title">Fiddle leaf fig plant</p>
-            <span class="card-text">
-              <span class="price-text">from</span> R329</span
-            >
-          </div>
-          <div class="button-class">
-            <button id="btn-cart" class="btn btn-primary btn-lg btn-block">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
