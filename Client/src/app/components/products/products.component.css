@@ -146,3 +146,20 @@
 .filter-dropdown:hover .filter-btn {
     background-color: #3e8e41;
 }
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centers the loader vertically on the screen */
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999; /* Make sure it's above other content */
+}
+  

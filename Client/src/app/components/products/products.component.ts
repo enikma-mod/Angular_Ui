@@ -15,7 +15,7 @@ export class ProductsComponent implements OnInit {
   // img.src = imageUrl;
   // }
   products: Product[] = [];
-
+  loading = true;
   //keep track of the current image being displayed.
   //card image changes on hover.
   private currentImageIndex = 0;
@@ -32,6 +32,7 @@ export class ProductsComponent implements OnInit {
     this.productService.getAllProducts()
       .subscribe(products => {
         this.products = products;
+        this.loading = false;
         console.log('hhhhhhh')
       });
   }
