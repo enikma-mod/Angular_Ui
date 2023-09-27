@@ -5,7 +5,7 @@ const db = {};
 
 db.mongoose = mongoose;
 
-// db.user = require("./user.model");
+db.user = require("../models/user.model");
 // db.role = require("./role.model");
 
 

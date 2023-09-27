@@ -2,5 +2,6 @@
 require('dotenv').config();
 module.exports = {
     url: process.env.DATABASE_URL,
-    Port: process.env.PORT
+    Port: process.env.PORT,
+    secret: process.env.JWT_SecretKey
 };

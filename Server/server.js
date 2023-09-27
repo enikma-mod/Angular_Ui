@@ -1,22 +1,22 @@
 const express = require("express");
 const cors = require("cors");
+const {log} = require("mercedlogger"); //colorful TERMINAL logs
 require('dotenv').config();
 
 const dbConfig = require("./app/config/dbconfig.js")
 const app = express();
-
+const authRoutes = require('../Server/app/routes/auth.routes.js');
+const userRoutes = require('../Server/app/routes/user.routes.js'); 
 
 var corsOptions = {
   origin: "*"
 };
 
+// GLOBAL MIDDLEWARE
 app.use(cors(corsOptions));
-
-// parse requests of content-type - application/json
 app.use(express.json());
-
-// parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
+// app.use(morgan("tiny")) // log the request for debugging
 
 // simple route
 app.get("/", (req, res) => {
@@ -28,28 +28,31 @@ const mongoose = require("mongoose");
 // const Product = require("./app/models/product.model")(mongoose);
 
 
-// set port, listen for requests
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
-  console.log(`Plant-Dads server is running on port ${PORT}.`);
+  log.green("SERVER STATUS", `Plant-Dads server is running on port ${PORT}.`);
 });
 
-// require('./app/routes/auth.routes')(app);
-// require('./app/routes/user.routes')(app);
+// require('./app/routes/auth.routes.js')(app);
 require("./app/routes/product.routes.js")(app);
-// require("./app/routes/wishlist.routes")(app);
+app.use('/auth', authRoutes);
+
+app.use('/user', userRoutes);
+
+
 
 mongoose
   .connect(dbConfig.url, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    
   })
   .then(() => {
-    // console.log(dbConfig.url)
-    console.log("Successfully connected to PlantDads Server.");
+
+    log.green("DATABASE STATE", "Successfully connected to PlantDads DB.");
     // You can perform any necessary initializations here.
   })
   .catch(err => {
-    console.error("Connection error", err);
+    log.red("DATABASE STATE", "Connection error", err);
     process.exit();
   });
