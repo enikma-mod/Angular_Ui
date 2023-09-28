@@ -37,8 +37,8 @@ app.listen(PORT, () => {
 require("./app/routes/product.routes.js")(app);
 
 
-app.use('/auth', authRoutes);
-app.use('/user', userRoutes);
+app.use('', authRoutes);
+app.use('user', userRoutes);
 
 
 

@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const User = require('../models/user.model');
 require('dotenv').config();
 
-// Register a new user
+// CREATE USER - @POST
 const register = async (req, res, next) => {
   const { firstName, lastName, email, password } = req.body;
 
@@ -42,4 +42,22 @@ const login = async (req, res, next) => {
   }
 };
 
-module.exports = { register, login };
+//GET BY ID - @GET
+const getUserById = async (req, res, next) => {
+  const userId = req.params.id;
+
+  try {
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.json(user);
+  } catch (error) {
+    next(error);
+  }
+};
+
+
+
+module.exports = { register, login, getUserById };
