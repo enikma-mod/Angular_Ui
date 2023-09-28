@@ -2,5 +2,8 @@
 <router-outlet></router-outlet>
 
 <!--REMOVE THE FOOTER FROM LOGIN & REGISTER PAGE-->
-<app-footer *ngIf="!sharedService.isLoginPage"></app-footer>
+<!-- <app-footer *ngIf="!sharedService.isLoginPage "></app-footer> -->
+
+<app-footer *ngIf="!(sharedService.isLoginPage || sharedService.isRegisterPage)"></app-footer>
+
 

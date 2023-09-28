@@ -5,11 +5,12 @@ require('dotenv').config();
 
 // Register a new user
 const register = async (req, res, next) => {
-  const { fullName, email, password } = req.body;
+  const { firstName, lastName, email, password } = req.body;
 
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({ fullName, email, password: hashedPassword });
+    const user = new User({ firstName, lastName, email, password: hashedPassword });
+    
     await user.save();
     res.json({ message: 'Registration successful' });
   } catch (error) {
@@ -28,7 +29,7 @@ const login = async (req, res, next) => {
     }
 
     const passwordMatch = await user.comparePassword(password);
-    if (!passwordMatch) {
+    if (passwordMatch) {
       return res.status(401).json({ message: 'Incorrect password' });
     }
 
